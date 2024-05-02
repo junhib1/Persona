@@ -1,31 +1,23 @@
 import java.util.Scanner;
 public class MainPersona {
     public static void main(String[] args) {
-            Persona persona1 = new Persona();
-        String a,e;
-        int i;
-        double o;
+        Persona persona1 = new Persona();
         
-    
         Scanner op = new Scanner(System.in);
         System.out.print("Ingresa nombre: ");
-        a = op.next();
+        persona1.setNombre(op.nextLine());
         System.out.print("Ingresa el apellido: ");
-        e = op.next();
+        persona1.setApellido(op.nextLine());
         System.out.print("Ingresa la edad: ");
-        i = op.nextInt();
+        persona1.setEdad(op.nextInt());
         System.out.print("Ingresa la altura: ");
-        o = op.nextDouble();
+        persona1.setAltura(op.nextDouble());
 
-        persona1.nombre = a;
-        persona1.apellido = e;
-        persona1.edad = i;
-        persona1.altura = o;
-
-        persona1.MostrarNombreCompleto();
-        persona1.MostrarEdad();
-        persona1.MostarAltura();
-
-
+        persona1.getNombre();
+        persona1.getApellido();
+        persona1.getEdad();
+        persona1.getAltura();
+        
+        System.out.println(persona1.toString());
     }
 }
